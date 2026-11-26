@@ -30,7 +30,7 @@ function Page() {
       <section className="container-site grid gap-14 pb-10 lg:grid-cols-2 lg:gap-24">
         <div>
           <p className="display text-5xl lg:text-7xl">Q Shira</p>
-          <p className="outline-word text-5xl lg:text-7xl">Creation</p>
+          <p className="accent-word text-5xl lg:text-7xl">Creation</p>
           <h2 className="mt-10 text-2xl font-medium leading-snug lg:text-3xl">
             We are here to listen. Tell us what you need and we will be glad to advise you.
           </h2>
@@ -39,13 +39,13 @@ function Page() {
             <p className="mt-4 text-lg text-muted-foreground">India</p>
             <p className="mt-2 text-lg">
               Email:{" "}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium text-plum">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-medium text-brand">
                 {CONTACT_EMAIL}
               </a>
             </p>
           </div>
         </div>
-        <form onSubmit={submit} className="space-y-5 bg-surface p-8 shadow-soft lg:p-12">
+        <form onSubmit={submit} className="space-y-5 rounded-[2rem] border border-border bg-surface p-8 shadow-soft lg:p-12">
           <h3 className="text-2xl font-semibold">Enquire Now</h3>
           <Input required maxLength={100} placeholder="Your name" value={form.name} onChange={set("name")} />
           <Input required type="email" maxLength={255} placeholder="Email" value={form.email} onChange={set("email")} />

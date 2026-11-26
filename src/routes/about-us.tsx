@@ -16,9 +16,9 @@ function Page() {
     <>
       <PageHero title="Overview" tabs={aboutTabs} />
       <Banner src={women} alt="Model wearing a knit loungewear set" />
-      <section className="container-site pt-16 text-center">
+      <section className="container-site pt-16">
         <p className="display text-5xl lg:text-7xl">Q Shira</p>
-        <p className="outline-word text-5xl lg:text-8xl">Creation</p>
+        <p className="accent-word text-5xl lg:text-8xl">Creation</p>
       </section>
       <Intro title="Commitment, craft and a clear vision guide everything we make.">
         <p>
@@ -60,7 +60,7 @@ function Page() {
         <p>
           Our knit garments are made for softness and easy wear. Our woven range brings a sharper, more tailored look for men, women and children.
         </p>
-        <Link to="/divisions" className="inline-block border-b border-plum pb-1 font-semibold text-plum">
+        <Link to="/divisions" className="inline-block border-b border-brand pb-1 font-semibold text-brand">
           See our divisions
         </Link>
       </Split>

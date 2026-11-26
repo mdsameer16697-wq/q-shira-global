@@ -28,7 +28,7 @@ function Page() {
         ]}
       />
       <div className="container-site pt-10 text-center">
-        <Link to="/contact-us" className="btn-circle">Work<br />with us</Link>
+        <Link to="/contact-us" className="btn-arrow">Work with us</Link>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 # Roadmap
-- [x] Design system (colours, fonts) like richaglobal.com
+- [x] Own look: new colours, fonts, layout pattern and scroll effects (content unchanged)
 - [x] Header, footer, enquiry button
 - [x] Home page
 - [x] Who We Are: overview, leadership, division, clients, awards, team

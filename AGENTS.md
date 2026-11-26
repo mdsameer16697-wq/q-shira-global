@@ -30,5 +30,6 @@ use the editor.
 <!-- LOVABLE:END -->
 
 ## Site structure
-- Shared page sections live in `src/components/site/blocks.tsx`; routes compose them instead of writing one-off layouts. Why: every inner page follows the same reference layout.
+- Shared page sections live in `src/components/site/blocks.tsx`; routes compose them instead of writing one-off layouts. Why: every inner page shares one layout, so a redesign happens in one file.
 - Navigation groups, company name, contact email and the `seo()` head helper live in `src/lib/site.ts`. Why: one place to change names and links.
+- Scroll animation is the `reveal` class plus the single observer in `src/routes/__root.tsx`; do not add per-component observers. Why: one place controls motion.

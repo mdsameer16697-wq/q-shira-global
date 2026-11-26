@@ -15,9 +15,9 @@ function Page() {
   return (
     <>
       <PageHero title="Manufacturing" tabs={processTabs} />
-      <section className="container-site pb-10 text-center">
+      <section className="container-site pb-10">
         <p className="display text-5xl lg:text-7xl">Modernized</p>
-        <p className="outline-word text-5xl lg:text-8xl">Production</p>
+        <p className="accent-word text-5xl lg:text-8xl">Production</p>
       </section>
       <Banner src={factory} alt="Rows of sewing machines on a bright factory floor" />
       <Intro title="Careful, modern manufacturing is what our buyers rely on." />

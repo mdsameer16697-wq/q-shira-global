@@ -18,9 +18,9 @@ function Page() {
         <p>Where creativity meets current technology to shape the future of fashion.</p>
       </Intro>
       <Banner src={design} alt="Designer sketching in a studio" />
-      <section className="container-site pt-16 text-center">
+      <section className="container-site pt-16">
         <p className="display text-5xl lg:text-7xl">Design</p>
-        <p className="outline-word text-5xl lg:text-8xl">Innovation</p>
+        <p className="accent-word text-5xl lg:text-8xl">Innovation</p>
       </section>
       <Split src={design} alt="Design desk with swatches" eyebrow="Our Team" title="Creative people, working closely with you">
         <p>

@@ -14,9 +14,9 @@ function Page() {
   return (
     <>
       <PageHero title="We Care" />
-      <section className="container-site pb-10 text-center">
+      <section className="container-site pb-10">
         <p className="display text-5xl lg:text-7xl">CSR &</p>
-        <p className="outline-word text-4xl sm:text-5xl lg:text-8xl">Sustainability</p>
+        <p className="accent-word text-4xl sm:text-5xl lg:text-8xl">Sustainability</p>
       </section>
       <Banner src={sustainability} alt="Factory roof with solar panels among trees" />
       <Intro title="Our commitment to social responsibility and sustainability">
