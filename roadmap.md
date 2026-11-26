@@ -12,3 +12,4 @@
 - [x] Mashup with orientfashions.com: photo hero, numbers strip, capabilities grid and page, closing call to action
 - [x] Founding year 2024 shown on site
 - [x] 90+ people shown on site
+- [x] Charcoal, sandstone and moss green theme; 1M+ yearly production shown

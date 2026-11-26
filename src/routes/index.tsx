@@ -69,8 +69,8 @@ function Index() {
       <Stats
         items={[
           { value: "2024", label: "The year we started" },
-          { value: "3", label: "Ranges: men, women and kids" },
           { value: "90+", label: "People at work" },
+          { value: "1M+", label: "Pieces made every year" },
           { value: "10", label: "Capabilities, start to finish" },
         ]}
       />
