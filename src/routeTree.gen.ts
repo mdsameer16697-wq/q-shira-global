@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as CapabilitiesRouteImport } from './routes/capabilities'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as DesignInnovationRouteImport } from './routes/design-innovation'
 import { Route as DivisionsRouteImport } from './routes/divisions'
@@ -38,6 +39,11 @@ const AboutUsRoute = AboutUsRouteImport.update({
 const AwardsRoute = AwardsRouteImport.update({
   id: '/awards',
   path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilitiesRoute = CapabilitiesRouteImport.update({
+  id: '/capabilities',
+  path: '/capabilities',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactUsRoute = ContactUsRouteImport.update({
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/awards': typeof AwardsRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact-us': typeof ContactUsRoute
   '/design-innovation': typeof DesignInnovationRoute
   '/divisions': typeof DivisionsRoute
@@ -122,6 +129,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/awards': typeof AwardsRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact-us': typeof ContactUsRoute
   '/design-innovation': typeof DesignInnovationRoute
   '/divisions': typeof DivisionsRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/awards': typeof AwardsRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact-us': typeof ContactUsRoute
   '/design-innovation': typeof DesignInnovationRoute
   '/divisions': typeof DivisionsRoute
@@ -159,6 +168,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/awards'
+    | '/capabilities'
     | '/contact-us'
     | '/design-innovation'
     | '/divisions'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/awards'
+    | '/capabilities'
     | '/contact-us'
     | '/design-innovation'
     | '/divisions'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/awards'
+    | '/capabilities'
     | '/contact-us'
     | '/design-innovation'
     | '/divisions'
@@ -211,6 +223,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
   AwardsRoute: typeof AwardsRoute
+  CapabilitiesRoute: typeof CapabilitiesRoute
   ContactUsRoute: typeof ContactUsRoute
   DesignInnovationRoute: typeof DesignInnovationRoute
   DivisionsRoute: typeof DivisionsRoute
@@ -246,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/awards'
       fullPath: '/awards'
       preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capabilities': {
+      id: '/capabilities'
+      path: '/capabilities'
+      fullPath: '/capabilities'
+      preLoaderRoute: typeof CapabilitiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact-us': {
@@ -339,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
   AwardsRoute: AwardsRoute,
+  CapabilitiesRoute: CapabilitiesRoute,
   ContactUsRoute: ContactUsRoute,
   DesignInnovationRoute: DesignInnovationRoute,
   DivisionsRoute: DivisionsRoute,

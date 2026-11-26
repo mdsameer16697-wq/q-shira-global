@@ -14,6 +14,7 @@ export function Logo({ onDark = false }: { onDark?: boolean }) {
       <span className="font-[family-name:var(--font-display)] text-xl leading-none sm:text-2xl">
         Q Shira <span className="italic text-highlight-deep">Creation</span>
       </span>
+      <span className="hidden self-end pb-0.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] opacity-60 xl:inline">Est. 2024</span>
     </Link>
   );
 }

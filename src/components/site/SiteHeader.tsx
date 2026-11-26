@@ -13,13 +13,13 @@ export function SiteHeader() {
         <Logo />
         <nav className="hidden items-center gap-1 rounded-full border border-border bg-surface p-1.5 lg:flex">
           {links.map((n) => (
-            <Link key={n.to} to={n.to} className="nav-link">
+            <Link key={n.to} to={n.to} className="nav-link whitespace-nowrap">
               {n.label}
             </Link>
           ))}
         </nav>
         <Link to="/contact-us" className="btn-arrow hidden lg:inline-flex">
-          Enquire Now
+          Start a conversation
         </Link>
         <button
           className="grid h-11 w-11 place-items-center rounded-full bg-brand text-primary-foreground lg:hidden"

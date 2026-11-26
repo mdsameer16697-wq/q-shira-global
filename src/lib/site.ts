@@ -26,9 +26,23 @@ export const processTabs = [
 export const mainNav = [
   { to: "/about-us", label: "Who We Are" },
   { to: "/men-clothing", label: "What We Do" },
+  { to: "/capabilities", label: "Capabilities" },
   { to: "/design-innovation", label: "How We Do" },
   { to: "/sustainability-csr", label: "We Care" },
   { to: "/contact-us", label: "Contact Us" },
+] as const;
+
+export const capabilities = [
+  { title: "Design & Product Development", text: "We work alongside your design team on trends, fit and technical detail, so ideas become garments that sell." },
+  { title: "Fabric Sourcing", text: "Fabrics and trims are chosen for feel, strength and value, and matched to the look each brand wants." },
+  { title: "Knitting", text: "Jersey, rib, fleece and terry, with or without stretch, kept close to the sewing floor." },
+  { title: "Cutting", text: "Digital patterns and careful marker planning give accurate cuts and less wasted fabric." },
+  { title: "Stitching", text: "Skilled operators and well-kept machines give clean, consistent seams on every piece." },
+  { title: "Embroidery & Surface Work", text: "Machine precision with hand-finished detail for garments that need something extra." },
+  { title: "Dyeing & Washing", text: "Colour and hand-feel developed to your standard and held steady across the order." },
+  { title: "Quality Checks", text: "Checks during making and a full inspection at the end, against your own standards." },
+  { title: "Finishing & Packing", text: "Pressing, trimming and packing done to your instructions, ready for the shop floor." },
+  { title: "Export & Shipping", text: "Clear timelines, honest updates and paperwork handled, from our door to yours." },
 ] as const;
 
 export type SitePath =

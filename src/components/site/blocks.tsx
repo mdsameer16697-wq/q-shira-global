@@ -183,3 +183,48 @@ export function ProductPage({
     </>
   );
 }
+
+export function Stats({ items }: { items: { value: string; label: string }[] }) {
+  return (
+    <section className="reveal border-b border-border bg-surface">
+      <dl className="container-site grid grid-cols-2 lg:grid-cols-4">
+        {items.map((s, i) => (
+          <div key={s.label} className={`flex flex-col-reverse gap-2 border-border px-2 py-8 lg:px-8 lg:py-12 ${i % 2 === 1 ? "border-l pl-6" : ""} ${i > 1 ? "border-t lg:border-t-0" : ""} ${i > 0 ? "lg:border-l" : ""}`}>
+            <dt className="text-sm text-muted-foreground lg:text-base">{s.label}</dt>
+            <dd className="display text-5xl text-brand lg:text-7xl">{s.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+export function NumberGrid({ items }: { items: readonly { title: string; text: string }[] }) {
+  return (
+    <div className="grid overflow-hidden rounded-3xl border border-border bg-surface sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((c, i) => (
+        <div key={c.title} className="group -mb-px -mr-px border-b border-r border-border p-7 transition-colors duration-300 hover:bg-brand hover:text-primary-foreground lg:p-9">
+          <span className="font-sans text-sm font-bold tracking-[0.2em] text-highlight-deep group-hover:text-highlight">
+            {String(i + 1).padStart(2, "0")}
+          </span>
+          <h3 className="mt-8 text-2xl font-medium">{c.title}</h3>
+          <p className="mt-3 leading-relaxed text-muted-foreground group-hover:text-primary-foreground/80">{c.text}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function NumberRows({ items }: { items: readonly { title: string; text: string }[] }) {
+  return (
+    <ol className="border-t border-border">
+      {items.map((c, i) => (
+        <li key={c.title} className="reveal grid gap-3 border-b border-border px-2 py-8 transition-all hover:bg-surface hover:px-6 lg:grid-cols-[6rem_2fr_3fr] lg:gap-10 lg:py-10">
+          <span className="font-[family-name:var(--font-display)] text-3xl italic text-highlight-deep">{String(i + 1).padStart(2, "0")}</span>
+          <h3 className="text-2xl font-medium lg:text-3xl">{c.title}</h3>
+          <p className="text-lg leading-relaxed text-muted-foreground">{c.text}</p>
+        </li>
+      ))}
+    </ol>
+  );
+}

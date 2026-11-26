@@ -9,3 +9,6 @@
 - [x] Contact us
 - [x] Images
 - [ ] Real contact details, client logos, awards and leadership names (waiting on owner)
+- [x] Mashup with orientfashions.com: photo hero, numbers strip, capabilities grid and page, closing call to action
+- [x] Founding year 2024 shown on site
+- [x] 90+ people shown on site

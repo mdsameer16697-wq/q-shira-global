@@ -10,7 +10,8 @@ import empower from "@/assets/empower.jpg";
 import design from "@/assets/design.jpg";
 import quality from "@/assets/quality.jpg";
 import sustainability from "@/assets/sustainability.jpg";
-import { seo } from "@/lib/site";
+import { NumberGrid, Stats } from "@/components/site/blocks";
+import { capabilities, seo } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -25,13 +26,6 @@ const categories = [
   { to: "/men-clothing", title: "Mens", img: men, text: "Carefully made pieces, cut for polish and everyday versatility." },
   { to: "/women-clothing", title: "Women", img: women, text: "From lasting classics to modern statements that bring confidence to every setting." },
   { to: "/kids-clothing", title: "Kids", img: kids, text: "Made for fun and for function, so little ones stay stylish and comfortable." },
-] as const;
-
-const how = [
-  { to: "/design-innovation", title: "Design & Innovation", text: "Turning imagination into wearable reality, with comfort and style in mind." },
-  { to: "/manufacturing", title: "Manufacturing", text: "Quality leads our production, supported by modern machines and skilled hands." },
-  { to: "/quality", title: "Quality", text: "Quality is more than a standard for us. It is a promise we keep on every piece." },
-  { to: "/design-innovation", title: "Technology", text: "We use current tools to keep our process fast, accurate and consistent." },
 ] as const;
 
 const care = [
@@ -49,24 +43,37 @@ function Index() {
   const current = care[active] ?? care[0]!;
   return (
     <>
-      <section className="container-site grid items-center gap-10 pb-14 pt-10 lg:grid-cols-[6fr_5fr] lg:gap-16 lg:pb-20 lg:pt-16">
-        <div className="rise">
-          <span className="block h-0.5 w-14 bg-highlight" />
-          <h1 className="display mt-6 text-5xl sm:text-6xl lg:text-8xl">
-            Excellence in <span className="italic text-highlight-deep">every stitch</span>
-          </h1>
-          <p className="mt-8 max-w-xl text-lg text-muted-foreground lg:text-xl">
-            From first sketch to finished garment, we bring creativity and quality together with care for every detail.
+      <section className="relative isolate overflow-hidden bg-brand-deep text-primary-foreground">
+        <img src={hero} alt="Two women in summer dresses walking down a sunny street" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brand-deep via-brand-deep/70 to-brand-deep/30" />
+        <div className="container-site rise flex min-h-[78vh] flex-col justify-end pb-12 pt-32 lg:pb-16">
+          <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-highlight">
+            <span className="h-0.5 w-8 bg-highlight" />
+            Garment manufacturing &amp; export · India
           </p>
-          <Link to="/about-us" className="btn-arrow mt-10">Read More</Link>
-        </div>
-        <div className="rise relative">
-          <div className="dots absolute -right-3 -top-3 h-40 w-40 rounded-full" aria-hidden="true" />
-          <div className="img-zoom relative aspect-[4/5] rounded-t-full">
-            <img src={hero} alt="Two women in summer dresses walking down a sunny street" className="h-full w-full object-cover" />
+          <h1 className="display mt-6 max-w-4xl text-5xl sm:text-6xl lg:text-8xl">
+            Excellence in <span className="italic text-highlight">every stitch</span>
+          </h1>
+          <div className="mt-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <p className="max-w-xl text-lg opacity-90 lg:text-xl">
+              From first sketch to finished garment, we bring creativity and quality together with care for every detail.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link to="/capabilities" className="btn-arrow on-dark">Explore capabilities</Link>
+              <Link to="/about-us" className="btn-ghost">Our story</Link>
+            </div>
           </div>
         </div>
       </section>
+
+      <Stats
+        items={[
+          { value: "2024", label: "The year we started" },
+          { value: "3", label: "Ranges: men, women and kids" },
+          { value: "90+", label: "People at work" },
+          { value: "10", label: "Capabilities, start to finish" },
+        ]}
+      />
 
       <div className="overflow-hidden border-y border-border bg-surface py-5" aria-hidden="true">
         <div className="marquee">
@@ -118,27 +125,20 @@ function Index() {
         ))}
       </section>
 
-      <section className="container-site reveal grid gap-12 py-20 lg:grid-cols-[2fr_3fr] lg:gap-20 lg:py-28">
-        <div className="lg:sticky lg:top-32 lg:self-start">
-          <p className="eyebrow">How We Do</p>
-          <h2 className="display mt-5 text-4xl lg:text-5xl">Careful making, from the first cut to the final check</h2>
-          <Link to="/quality" className="btn-arrow mt-10">Read More</Link>
+      <section className="container-site reveal py-20 lg:py-28">
+        <div className="mb-12 grid items-end gap-8 lg:grid-cols-[3fr_2fr]">
+          <div>
+            <p className="eyebrow">What we can do</p>
+            <h2 className="display mt-5 text-4xl lg:text-6xl">From first sketch to shipped order.</h2>
+          </div>
+          <div className="flex flex-col items-start gap-6">
+            <p className="text-lg text-muted-foreground">
+              Design, fabric, making, finishing and quality are handled by one team, so nothing gets lost between steps.
+            </p>
+            <Link to="/capabilities" className="btn-arrow">All capabilities</Link>
+          </div>
         </div>
-        <ul className="border-t border-border">
-          {how.map((h, i) => (
-            <li key={h.title} className="border-b border-border">
-              <Link to={h.to} className="group flex gap-6 px-2 py-8 transition-all hover:bg-surface hover:px-6 lg:gap-10">
-                <span className="font-[family-name:var(--font-display)] text-3xl italic text-highlight-deep">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span>
-                  <h3 className="text-2xl font-semibold transition-colors group-hover:text-brand lg:text-3xl">{h.title}</h3>
-                  <p className="mt-3 text-lg leading-relaxed text-muted-foreground">{h.text}</p>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <NumberGrid items={capabilities.slice(0, 6)} />
       </section>
 
       <section className="reveal bg-accent py-16 lg:py-24">
@@ -189,6 +189,14 @@ function Index() {
           <p className="mt-6 text-xl text-muted-foreground">
             We work to use less water and energy, waste less fabric and look after the people who make our clothes.
           </p>
+          <ul className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border">
+            {["Less water", "Less energy", "Less fabric waste", "Fair, safe work"].map((t, i) => (
+              <li key={t} className="bg-surface p-6">
+                <span className="font-sans text-xs font-bold tracking-[0.2em] text-highlight-deep">{String(i + 1).padStart(2, "0")}</span>
+                <p className="mt-3 font-[family-name:var(--font-display)] text-2xl">{t}</p>
+              </li>
+            ))}
+          </ul>
           <Link to="/sustainability-csr" className="btn-arrow mt-10">Read More</Link>
         </div>
         <div className="img-zoom aspect-[4/3] rounded-tr-[5rem]">

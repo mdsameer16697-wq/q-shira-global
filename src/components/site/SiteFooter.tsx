@@ -12,6 +12,18 @@ export function SiteFooter() {
   return (
     <footer className="relative mt-24 overflow-hidden rounded-t-[2.5rem] bg-brand-deep text-primary-foreground">
       <div className="dots pointer-events-none absolute inset-0 opacity-40" aria-hidden="true" />
+      <div className="container-site reveal relative border-b border-primary-foreground/15 py-16 lg:py-24">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-highlight">Let's build something</p>
+        <div className="mt-6 grid items-end gap-8 lg:grid-cols-[3fr_2fr]">
+          <h2 className="display text-4xl lg:text-6xl">
+            Tell us what you're making. We'll show you how we'd <span className="italic text-highlight">make it</span>.
+          </h2>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
+            <Link to="/contact-us" className="btn-arrow on-dark">Start a conversation</Link>
+            <Link to="/capabilities" className="btn-ghost">See our capabilities</Link>
+          </div>
+        </div>
+      </div>
       <div className="container-site relative grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5 lg:py-20">
         <div className="lg:col-span-2">
           <Logo onDark />
