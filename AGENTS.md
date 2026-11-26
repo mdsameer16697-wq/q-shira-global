@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Site structure
+- Shared page sections live in `src/components/site/blocks.tsx`; routes compose them instead of writing one-off layouts. Why: every inner page follows the same reference layout.
+- Navigation groups, company name, contact email and the `seo()` head helper live in `src/lib/site.ts`. Why: one place to change names and links.

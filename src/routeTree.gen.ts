@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as DesignInnovationRouteImport } from './routes/design-innovation'
+import { Route as DivisionsRouteImport } from './routes/divisions'
+import { Route as KidsClothingRouteImport } from './routes/kids-clothing'
+import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as ManufacturingRouteImport } from './routes/manufacturing'
+import { Route as MenClothingRouteImport } from './routes/men-clothing'
+import { Route as OurClientsRouteImport } from './routes/our-clients'
+import { Route as OurTeamRouteImport } from './routes/our-team'
+import { Route as QualityRouteImport } from './routes/quality'
+import { Route as SustainabilityCsrRouteImport } from './routes/sustainability-csr'
+import { Route as WomenClothingRouteImport } from './routes/women-clothing'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesignInnovationRoute = DesignInnovationRouteImport.update({
+  id: '/design-innovation',
+  path: '/design-innovation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DivisionsRoute = DivisionsRouteImport.update({
+  id: '/divisions',
+  path: '/divisions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KidsClothingRoute = KidsClothingRouteImport.update({
+  id: '/kids-clothing',
+  path: '/kids-clothing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManufacturingRoute = ManufacturingRouteImport.update({
+  id: '/manufacturing',
+  path: '/manufacturing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenClothingRoute = MenClothingRouteImport.update({
+  id: '/men-clothing',
+  path: '/men-clothing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurClientsRoute = OurClientsRouteImport.update({
+  id: '/our-clients',
+  path: '/our-clients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurTeamRoute = OurTeamRouteImport.update({
+  id: '/our-team',
+  path: '/our-team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualityRoute = QualityRouteImport.update({
+  id: '/quality',
+  path: '/quality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SustainabilityCsrRoute = SustainabilityCsrRouteImport.update({
+  id: '/sustainability-csr',
+  path: '/sustainability-csr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WomenClothingRoute = WomenClothingRouteImport.update({
+  id: '/women-clothing',
+  path: '/women-clothing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/awards': typeof AwardsRoute
+  '/contact-us': typeof ContactUsRoute
+  '/design-innovation': typeof DesignInnovationRoute
+  '/divisions': typeof DivisionsRoute
+  '/kids-clothing': typeof KidsClothingRoute
+  '/leadership': typeof LeadershipRoute
+  '/manufacturing': typeof ManufacturingRoute
+  '/men-clothing': typeof MenClothingRoute
+  '/our-clients': typeof OurClientsRoute
+  '/our-team': typeof OurTeamRoute
+  '/quality': typeof QualityRoute
+  '/sustainability-csr': typeof SustainabilityCsrRoute
+  '/women-clothing': typeof WomenClothingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/awards': typeof AwardsRoute
+  '/contact-us': typeof ContactUsRoute
+  '/design-innovation': typeof DesignInnovationRoute
+  '/divisions': typeof DivisionsRoute
+  '/kids-clothing': typeof KidsClothingRoute
+  '/leadership': typeof LeadershipRoute
+  '/manufacturing': typeof ManufacturingRoute
+  '/men-clothing': typeof MenClothingRoute
+  '/our-clients': typeof OurClientsRoute
+  '/our-team': typeof OurTeamRoute
+  '/quality': typeof QualityRoute
+  '/sustainability-csr': typeof SustainabilityCsrRoute
+  '/women-clothing': typeof WomenClothingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/awards': typeof AwardsRoute
+  '/contact-us': typeof ContactUsRoute
+  '/design-innovation': typeof DesignInnovationRoute
+  '/divisions': typeof DivisionsRoute
+  '/kids-clothing': typeof KidsClothingRoute
+  '/leadership': typeof LeadershipRoute
+  '/manufacturing': typeof ManufacturingRoute
+  '/men-clothing': typeof MenClothingRoute
+  '/our-clients': typeof OurClientsRoute
+  '/our-team': typeof OurTeamRoute
+  '/quality': typeof QualityRoute
+  '/sustainability-csr': typeof SustainabilityCsrRoute
+  '/women-clothing': typeof WomenClothingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about-us'
+    | '/awards'
+    | '/contact-us'
+    | '/design-innovation'
+    | '/divisions'
+    | '/kids-clothing'
+    | '/leadership'
+    | '/manufacturing'
+    | '/men-clothing'
+    | '/our-clients'
+    | '/our-team'
+    | '/quality'
+    | '/sustainability-csr'
+    | '/women-clothing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about-us'
+    | '/awards'
+    | '/contact-us'
+    | '/design-innovation'
+    | '/divisions'
+    | '/kids-clothing'
+    | '/leadership'
+    | '/manufacturing'
+    | '/men-clothing'
+    | '/our-clients'
+    | '/our-team'
+    | '/quality'
+    | '/sustainability-csr'
+    | '/women-clothing'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-us'
+    | '/awards'
+    | '/contact-us'
+    | '/design-innovation'
+    | '/divisions'
+    | '/kids-clothing'
+    | '/leadership'
+    | '/manufacturing'
+    | '/men-clothing'
+    | '/our-clients'
+    | '/our-team'
+    | '/quality'
+    | '/sustainability-csr'
+    | '/women-clothing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
+  AwardsRoute: typeof AwardsRoute
+  ContactUsRoute: typeof ContactUsRoute
+  DesignInnovationRoute: typeof DesignInnovationRoute
+  DivisionsRoute: typeof DivisionsRoute
+  KidsClothingRoute: typeof KidsClothingRoute
+  LeadershipRoute: typeof LeadershipRoute
+  ManufacturingRoute: typeof ManufacturingRoute
+  MenClothingRoute: typeof MenClothingRoute
+  OurClientsRoute: typeof OurClientsRoute
+  OurTeamRoute: typeof OurTeamRoute
+  QualityRoute: typeof QualityRoute
+  SustainabilityCsrRoute: typeof SustainabilityCsrRoute
+  WomenClothingRoute: typeof WomenClothingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/design-innovation': {
+      id: '/design-innovation'
+      path: '/design-innovation'
+      fullPath: '/design-innovation'
+      preLoaderRoute: typeof DesignInnovationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/divisions': {
+      id: '/divisions'
+      path: '/divisions'
+      fullPath: '/divisions'
+      preLoaderRoute: typeof DivisionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kids-clothing': {
+      id: '/kids-clothing'
+      path: '/kids-clothing'
+      fullPath: '/kids-clothing'
+      preLoaderRoute: typeof KidsClothingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manufacturing': {
+      id: '/manufacturing'
+      path: '/manufacturing'
+      fullPath: '/manufacturing'
+      preLoaderRoute: typeof ManufacturingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/men-clothing': {
+      id: '/men-clothing'
+      path: '/men-clothing'
+      fullPath: '/men-clothing'
+      preLoaderRoute: typeof MenClothingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-clients': {
+      id: '/our-clients'
+      path: '/our-clients'
+      fullPath: '/our-clients'
+      preLoaderRoute: typeof OurClientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-team': {
+      id: '/our-team'
+      path: '/our-team'
+      fullPath: '/our-team'
+      preLoaderRoute: typeof OurTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quality': {
+      id: '/quality'
+      path: '/quality'
+      fullPath: '/quality'
+      preLoaderRoute: typeof QualityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sustainability-csr': {
+      id: '/sustainability-csr'
+      path: '/sustainability-csr'
+      fullPath: '/sustainability-csr'
+      preLoaderRoute: typeof SustainabilityCsrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/women-clothing': {
+      id: '/women-clothing'
+      path: '/women-clothing'
+      fullPath: '/women-clothing'
+      preLoaderRoute: typeof WomenClothingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
+  AwardsRoute: AwardsRoute,
+  ContactUsRoute: ContactUsRoute,
+  DesignInnovationRoute: DesignInnovationRoute,
+  DivisionsRoute: DivisionsRoute,
+  KidsClothingRoute: KidsClothingRoute,
+  LeadershipRoute: LeadershipRoute,
+  ManufacturingRoute: ManufacturingRoute,
+  MenClothingRoute: MenClothingRoute,
+  OurClientsRoute: OurClientsRoute,
+  OurTeamRoute: OurTeamRoute,
+  QualityRoute: QualityRoute,
+  SustainabilityCsrRoute: SustainabilityCsrRoute,
+  WomenClothingRoute: WomenClothingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

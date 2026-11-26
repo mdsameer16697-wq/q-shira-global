@@ -1,0 +1,11 @@
+# Roadmap
+- [x] Design system (colours, fonts) like richaglobal.com
+- [x] Header, footer, enquiry button
+- [x] Home page
+- [x] Who We Are: overview, leadership, division, clients, awards, team
+- [x] What We Do: men, women, kids
+- [x] How We Do: design & innovation, manufacturing, quality
+- [x] We Care: sustainability & CSR
+- [x] Contact us
+- [x] Images
+- [ ] Real contact details, client logos, awards and leadership names (waiting on owner)
